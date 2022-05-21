@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <ApplicationDefinition Update="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="account_manage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Admin.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="checkroom.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="DirectIn.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="History.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="hotellife.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="pay.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="qiantai.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="quitroom.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Reserve.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Reserve_confirm.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="room-manage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="account_manage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Admin.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="checkroom.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="DirectIn.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="History.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="hotellife.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="pay.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="qiantai.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="quitroom.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Reserve.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Reserve_confirm.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="room-manage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>

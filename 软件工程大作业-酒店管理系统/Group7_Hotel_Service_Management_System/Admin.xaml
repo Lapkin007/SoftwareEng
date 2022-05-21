@@ -1,0 +1,33 @@
+﻿<Window x:Class="Group7_Hotel_Service_Management_System.Admin"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Group7_Hotel_Service_Management_System"
+        mc:Ignorable="d"
+        Title="H S M S-Group 7" Height="725" Width="1358">
+    <Grid Background="#FFDEDEDE">
+        <GroupBox x:Name="GB_live" HorizontalAlignment="Center" Height="422" Header="酒店房间预约情况                                   酒店房间入住情况" Margin="0,262,0,0" VerticalAlignment="Top" Width="1338" Background="#FF5A8C81" FontSize="36">
+            <GroupBox.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="#FFC53838" Offset="1"/>
+                </LinearGradientBrush>
+            </GroupBox.Foreground>
+            <Grid>
+                <DataGrid x:Name="DG_live" HorizontalAlignment="Left" Height="343" Margin="663,0,0,0" VerticalAlignment="Center" Width="653" d:ItemsSource="{d:SampleData ItemCount=5}" FontSize="22" FontFamily="Yu Gothic UI"/>
+                <DataGrid x:Name="DG_reserve" HorizontalAlignment="Left" Height="343" Margin="10,0,0,0" VerticalAlignment="Center" Width="643" d:ItemsSource="{d:SampleData ItemCount=5}" FontSize="22" FontFamily="Yu Gothic UI"/>
+            </Grid>
+        </GroupBox>
+        <Button x:Name="B_hotellife" Content="酒店生活" HorizontalAlignment="Left" Height="95" Margin="1101,32,0,0" VerticalAlignment="Top" Width="233" FontSize="36" Background="#FFBDBFE2" Foreground="#FF541E1E" Click="B_hotellife_Click"/>
+        <Button x:Name="B_checkromm" Content="查看入住情况" HorizontalAlignment="Left" Height="86" VerticalAlignment="Top" Width="233" FontSize="36" Background="#FFCAE2BD" Foreground="#FF541E1E" Margin="1101,167,0,0" Click="B_checkromm_Click"/>
+        <Button x:Name="B_quitromm" HorizontalAlignment="Left" Height="86" Margin="679,167,0,0" VerticalAlignment="Top" Width="386" FontSize="36" Background="#FFF3CB5C" Foreground="#FF541E1E" Content="退房" Click="B_quitromm_Click"/>
+        <Button x:Name="B_quitromm_Copy" HorizontalAlignment="Left" Height="95" Margin="679,32,0,0" VerticalAlignment="Top" Width="386" FontSize="36" Background="#FFF78686" Foreground="#FF541E1E" Content="缴费" Click="B_quitromm_Copy_Click"/>
+        <Button x:Name="B_room_reflash" Content="刷新" HorizontalAlignment="Left" Height="34" VerticalAlignment="Top" Width="200" FontSize="24" Background="#FFE8E8E8" Foreground="#FF541E1E" Margin="468,283,0,0" Click="B_room_reflash_click"/>
+        <Grid HorizontalAlignment="Left" Height="242" Margin="22,21,0,0" VerticalAlignment="Top" Width="646">
+            <Button x:Name="B_reserve_confirm" Content="预约确认" HorizontalAlignment="Left" Height="219" Margin="225,13,0,0" VerticalAlignment="Top" Width="158" FontSize="36" Background="#FFBDDEE2" Foreground="#FF541E1E" Click="B_reserve_confirm_Click"/>
+            <Button x:Name="B_reserve" Content="宾客预约" HorizontalAlignment="Left" Height="219" Margin="10,13,0,0" VerticalAlignment="Top" Width="158" FontSize="36" Background="#FFBDDEE2" Foreground="#FF541E1E" Click="B_reserve_Click"/>
+            <Button x:Name="B_confirm_in" HorizontalAlignment="Left" Height="218" Margin="440,14,0,0" VerticalAlignment="Top" Width="158" FontSize="36" Background="#FF8AD8D6" Foreground="#FF541E1E" Content="现场入住" Click="B_confirm_in_Click"/>
+        </Grid>
+    </Grid>
+</Window>

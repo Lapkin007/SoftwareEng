@@ -1,0 +1,55 @@
+﻿<Window x:Class="Group7_Hotel_Service_Management_System.Reserve"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Group7_Hotel_Service_Management_System"
+        mc:Ignorable="d"
+        Title="HSMS-Reserve" Height="400" Width="1000">
+    <Grid>
+        <Viewbox Stretch=" fill">
+            <Canvas Width=" 825" Height=" 350">
+                <DataGrid x:Name="DG_reserve" Height="265" Canvas.Left="283" Width="532" d:ItemsSource="{d:SampleData ItemCount=5}"/>
+
+                <GroupBox x:Name="GB_delete" Height="75" Header="删除预约区域" Canvas.Top="265" Width="815" Background="#FFF7D4CA" Foreground="#FF924242">
+                    <Grid Height="68" Margin="4,0,-2,0">
+                        <Button x:Name="B_reserve_delete" Content="删除预约" Canvas.Left="11" Canvas.Top="295" Background="#FFCE6D6D" FontSize="20" FontFamily="Sitka Small" Margin="635,9,31,20" Click="B_reserve_delete_Click"/>
+                        <ComboBox x:Name="CB_roomid2" HorizontalAlignment="Left" Height="33" Margin="484,13,0,0" VerticalAlignment="Top" Width="113"/>
+                        <ComboBox x:Name="CB_name" HorizontalAlignment="Left" Height="33" Margin="207,13,0,0" VerticalAlignment="Top" Width="108" SelectionChanged="CB_name_SelectionChanged"/>
+                        <Label Content="取消预约的客户姓名:" HorizontalAlignment="Left" Height="28" Margin="48,14,0,0" VerticalAlignment="Top" Width="159" FontSize="16"/>
+                        <Label Content="取消预约的房间号码:" HorizontalAlignment="Left" Height="28" Margin="325,14,0,0" VerticalAlignment="Top" Width="159" FontSize="16"/>
+                    </Grid>
+                </GroupBox>
+
+                <GroupBox Height="255" Header="添加预约区域" Canvas.Left="10" Canvas.Top="10" Width="268" Background="#FFB5DC9B" Foreground="#FF2A5434">
+                    <Grid HorizontalAlignment="Left" Height="224" VerticalAlignment="Top" Width="258">
+                        <Button x:Name="B_reserve_add" Content="添加预约" Background="#FF3FB9B1" FontSize="20" FontFamily="Sitka Small" Click="B_reserve_add_Click" Margin="10,10,4,170" RenderTransformOrigin="0.5,0.5">
+                            <Button.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform/>
+                                    <SkewTransform AngleX="-0.263"/>
+                                    <RotateTransform/>
+                                    <TranslateTransform X="-0.408"/>
+                                </TransformGroup>
+                            </Button.RenderTransform>
+                        </Button>
+                        <TextBox x:Name="TB_name" Height="25" Canvas.Left="85" Canvas.Top="72" TextWrapping="Wrap" Margin="48,59,143,140"/>
+                        <TextBox x:Name="TB_tel" Height="25" Canvas.Left="85" Canvas.Top="102" TextWrapping="Wrap" Margin="155,59,5,140"/>
+                        <DatePicker x:Name="DP_arrive" Height="32" Canvas.Left="37" Canvas.Top="195" Width="149" Margin="99,159,0,33"/>
+                        <DatePicker x:Name="DP_leave" Height="28" Canvas.Left="37" Canvas.Top="232" Width="149" Margin="99,196,0,0"/>
+                        <ComboBox x:Name="CB_roomtype" Canvas.Left="85" Canvas.Top="127" SelectionChanged="CB_roomtype_SelectionChanged" Margin="69,95,5,103"/>
+                        <ComboBox x:Name="CB_roomid" Canvas.Left="85" Canvas.Top="127" Margin="69,130,5,69"/>
+                        <Label HorizontalAlignment="Left" Height="25" Margin="10,59,0,0" VerticalAlignment="Top" Width="38" Foreground="#FFBF3A3A"/>
+                        <Label Content="电话" HorizontalAlignment="Left" Height="25" Margin="115,59,0,0" VerticalAlignment="Top" Width="35" Foreground="#FFC14B4B"/>
+                        <Label Content="预定入住酒店日期" HorizontalAlignment="Left" Height="26" Margin="0,158,0,0" VerticalAlignment="Top" Width="110" Foreground="#FFBF3A3A"/>
+                        <Label Content="房间类型" HorizontalAlignment="Left" Height="25" Margin="6,96,0,0" VerticalAlignment="Top" Width="58" Foreground="#FFBF3A3A"/>
+                        <Label Content="房间号" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="46" Foreground="#FFBF3A3A" Margin="12,128,0,0"/>
+                        <Label Content="姓名" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="38" Foreground="#FFBF3A3A" Margin="10,59,0,0"/>
+                        <Label Content="预定离开酒店日期" HorizontalAlignment="Left" Height="26" Margin="0,196,0,0" VerticalAlignment="Top" Width="110" Foreground="#FFBF3A3A"/>
+                    </Grid>
+                </GroupBox>
+
+            </Canvas>
+        </Viewbox>
+    </Grid>
+</Window>

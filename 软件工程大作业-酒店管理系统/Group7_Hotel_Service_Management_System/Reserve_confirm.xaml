@@ -1,0 +1,49 @@
+﻿<Window x:Class="Group7_Hotel_Service_Management_System.Reserve_confirm"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Group7_Hotel_Service_Management_System"
+        mc:Ignorable="d"
+        Title="HSMS-Reserve_confirm" Height="400" Width="1000">
+    <Grid>
+        <Viewbox Stretch=" fill">
+            <Canvas Width=" 795" Height=" 350">
+                <DataGrid x:Name="DG_reserve_confirm" Height="199" Width="386" d:ItemsSource="{d:SampleData ItemCount=5}" Canvas.Top="53" Canvas.Left="10"/>
+                <Label Content="已预约信息：                                   已入住信息：" Canvas.Left="10" Canvas.Top="9" Height="39" Width="775" FontSize="24" Background="#FFEFD4D4" Foreground="#FF732A2A"/>
+                <GroupBox x:Name="GB_Reserve_confirm" Height="102" Header="预约确认区域" Canvas.Left="8" Canvas.Top="238" Width="777" FontSize="18" FontFamily="SimHei" Background="#FF96DCC3">
+                    <GroupBox.Foreground>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="Black"/>
+                            <GradientStop Color="#FF003EFF" Offset="1"/>
+                        </LinearGradientBrush>
+                    </GroupBox.Foreground>
+                    <Grid HorizontalAlignment="Left" Height="82" VerticalAlignment="Top" Width="767">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="61*"/>
+                            <ColumnDefinition Width="706*"/>
+                        </Grid.ColumnDefinitions>
+                        <Button x:Name="B_reserve_confirm" Content="预约确认" FontSize="20" FontFamily="Sitka Small" Margin="581,13,10,23" Click="B_reserve_confirm_Click" Grid.Column="1">
+                            <Button.Background>
+                                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                    <GradientStop Color="Black"/>
+                                    <GradientStop Color="#FF6BED85" Offset="1"/>
+                                    <GradientStop Color="#FF78BB60" Offset="0.277"/>
+                                    <GradientStop Color="#FF5CF96D" Offset="0.003"/>
+                                </LinearGradientBrush>
+                            </Button.Background>
+                        </Button>
+                        <ComboBox x:Name="CB_name" HorizontalAlignment="Left" Height="33" Margin="6,19,0,0" VerticalAlignment="Top" Width="89" SelectionChanged="CB_name_SelectionChanged" Grid.Column="1"/>
+                        <ComboBox x:Name="CB_id" HorizontalAlignment="Left" Height="33" Margin="168,19,0,0" VerticalAlignment="Top" Width="115" Grid.Column="1"/>
+                        <TextBox x:Name="persion_id" HorizontalAlignment="Left" Height="24" Margin="386,24,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="190" Grid.Column="1"/>
+                        <Label Grid.Column="1" Content="身份证号码" HorizontalAlignment="Left" Height="34" Margin="283,19,0,0" VerticalAlignment="Top" Width="98"/>
+                        <Label Grid.Column="1" Content="房间号" HorizontalAlignment="Left" Height="34" Margin="100,19,0,0" VerticalAlignment="Top" Width="63"/>
+                        <Label Content="姓名" HorizontalAlignment="Left" Height="34" Margin="15,19,0,0" VerticalAlignment="Top" Width="51" Grid.ColumnSpan="2"/>
+                    </Grid>
+                </GroupBox>
+                <DataGrid x:Name="DG_live" Height="199" Canvas.Left="403" Canvas.Top="53" Width="382"/>
+
+            </Canvas>
+        </Viewbox>
+    </Grid>
+</Window>
